@@ -191,6 +191,17 @@ cookbook_file "server.key" do
   action :create_if_missing
 end
 
+execute "switch yum to http" do
+  command 'sudo sed -i "s/mirrorlist=https/mirrorlist=http/" /etc/yum.repos.d/epel.repo'
+end
+
+execute "cleanup yum cache" do
+  command 'sudo yum clean dbcache'
+end
+
+execute "cleanup yum history" do
+  command 'sudo yum history new'
+end
 
 package "mercurial"
 package "subversion"
