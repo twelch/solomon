@@ -13,7 +13,7 @@
     "angular-ui": "~0.4.0",
     "select2": "~3.3.2",
     "leaflet": "~0.5.1",
-    "flatui": "latest",
+    "flatui": "v2.2.2",
     "angular-grid": "~2.0.5",
     "jquery-ui-bootstrap": "~0.2.5"
   },
