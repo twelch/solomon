@@ -19,6 +19,17 @@ easy_install pip #(if you do not already have)
 pip install fabric #(if you do not already have)
 fab vagrant bootstrap
 fab vagrant createsuperuser
+```
+## Client-side dependencies
+Install npm
+```bash
+npm install -g bower
+cd to root directory containing .bowerrc and component.json files
+bower install
+```
+
+## Run dev server
+```bash
 fab vagrant runserver
 ```
 
